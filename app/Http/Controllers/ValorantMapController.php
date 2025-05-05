@@ -2,46 +2,46 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Agent;
+use App\Models\ValorantMap;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 use Illuminate\Http\RedirectResponse;
 
-class AgentController extends Controller
+class ValorantMapController extends Controller
 {
     public function index(): View
     {
-        $agents = Agent::all();
-        return view('agents.index', compact('agents'));
+        $maps = ValorantMap::all();
+        return view('maps.index', compact('maps'));
     }
 
     public function create(): View
     {
-        return view('agents.create');
+        return view('maps.create');
     }
 
     public function store(Request $request): RedirectResponse
     {
-        return redirect()->route('agents.index');
+        return redirect()->route('maps.index');
     }
 
     public function show(string $id): View
     {
-        return view('agents.show', compact('id'));
+        return view('maps.show', compact('id'));
     }
 
     public function edit(string $id): View
     {
-        return view('agents.edit', compact('id'));
+        return view('maps.edit', compact('id'));
     }
 
     public function update(Request $request, string $id): RedirectResponse
     {
-        return redirect()->route('agents.show', $id);
+        return redirect()->route('maps.show', $id);
     }
 
     public function destroy(string $id): RedirectResponse
     {
-        return redirect()->route('agents.index');
+        return redirect()->route('maps.index');
     }
 }

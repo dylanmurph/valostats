@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Player extends Model
@@ -13,11 +13,21 @@ class Player extends Model
     protected $fillable = [
         'username',
         'region',
-        'rank',
+        'elo',
+        'total_kills',
+        'games_played',
+        'wins',
+        'losses',
+        'headshot_pct',
     ];
 
-    public function stats(): HasMany
+    public function agentStats(): HasMany
     {
         return $this->hasMany(PlayerAgentStat::class);
+    }
+
+    public function mapStats(): HasMany
+    {
+        return $this->hasMany(PlayerMapStat::class);
     }
 }

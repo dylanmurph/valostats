@@ -6,18 +6,17 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Agent extends Model
+class ValorantMap extends Model
 {
     use HasFactory;
 
     protected $fillable = [
         'name',
-        'role',
         'image_url',
     ];
 
-    public function stats(): HasMany
+    public function playerStats(): HasMany
     {
-        return $this->hasMany(PlayerAgentStat::class);
+        return $this->hasMany(PlayerMapStat::class);
     }
 }

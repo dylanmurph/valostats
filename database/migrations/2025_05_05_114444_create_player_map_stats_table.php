@@ -6,11 +6,11 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration {
     public function up(): void {
-        Schema::create('player_agent_stats', function (Blueprint $table) {
+        Schema::create('player_map_stats', function (Blueprint $table) {
             $table->id();
 
             $table->foreignId('player_id')->constrained('players')->onDelete('cascade');
-            $table->foreignId('agent_id')->constrained('agents')->onDelete('cascade');
+            $table->foreignId('map_id')->constrained('valorant_maps')->onDelete('cascade');
 
             $table->unsignedInteger('matches_played')->default(0);
             $table->unsignedInteger('total_kills')->default(0);
@@ -24,6 +24,6 @@ return new class extends Migration {
     }
 
     public function down(): void {
-        Schema::dropIfExists('player_agent_stats');
+        Schema::dropIfExists('player_map_stats');
     }
 };

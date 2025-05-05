@@ -6,13 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class PlayerAgentStat extends Model
+class PlayerMapStat extends Model
 {
     use HasFactory;
 
     protected $fillable = [
         'player_id',
-        'agent_id',
+        'map_id',
         'matches_played',
         'total_kills',
         'kda_ratio',
@@ -26,8 +26,8 @@ class PlayerAgentStat extends Model
         return $this->belongsTo(Player::class);
     }
 
-    public function agent(): BelongsTo
+    public function map(): BelongsTo
     {
-        return $this->belongsTo(Agent::class);
+        return $this->belongsTo(ValorantMap::class);
     }
 }
