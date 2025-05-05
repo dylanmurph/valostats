@@ -9,7 +9,7 @@ module.exports = {
                 background: '#0d1117',
                 surface: '#1a1f29',
                 mid: '#161b22',
-                foreground: '#e2e8f0',
+                foreground: '#cbcbcb',
                 border: '#2c313a',
                 grayMuted: '#94a3b8',
                 error: '#ef4444',

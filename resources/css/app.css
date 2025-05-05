@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.mask-left-fade {
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, black 100%);
+    mask-size: 100% 100%;
+    mask-repeat: no-repeat;
+}

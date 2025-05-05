@@ -30,4 +30,19 @@ class Player extends Model
     {
         return $this->hasMany(PlayerMapStat::class);
     }
+
+    public function getRankAttribute()
+    {
+        foreach (config('valorant_ranks') as $rank) {
+            if ($this->elo >= $rank['min_elo'] && $this->elo <= $rank['max_elo']) {
+                return $rank;
+            }
+        }
+
+        return [
+            'name' => 'Unranked',
+            'image' => 'images/ranks/unranked.png',
+        ];
+    }
+
 }

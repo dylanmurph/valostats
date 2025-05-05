@@ -28,7 +28,11 @@ class PlayerController extends Controller
     public function show(string $id): View
     {
         $player = Player::with(['agentStats.agent', 'mapStats.map'])->findOrFail($id);
-        return view('players.show', compact('player'));
+
+        $bestAgent = $player->agentStats->sortByDesc('win_rate')->first()?->agent;
+        $bestMap = $player->mapStats->sortByDesc('win_rate')->first()?->map;
+
+        return view('players.show', compact('player', 'bestAgent', 'bestMap'));
     }
 
     public function edit(string $id): View
