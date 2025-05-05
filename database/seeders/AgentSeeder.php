@@ -22,7 +22,7 @@ class AgentSeeder extends Seeder
             ['name' => 'Harbor', 'role' => 'Controller'],
             ['name' => 'Iso', 'role' => 'Duelist'],
             ['name' => 'Jett', 'role' => 'Duelist'],
-            ['name' => 'KAY/O', 'role' => 'Initiator'],
+            ['name' => 'KAYO', 'role' => 'Initiator'],
             ['name' => 'Killjoy', 'role' => 'Sentinel'],
             ['name' => 'Neon', 'role' => 'Duelist'],
             ['name' => 'Omen', 'role' => 'Controller'],
@@ -35,7 +35,6 @@ class AgentSeeder extends Seeder
             ['name' => 'Tejo', 'role' => 'Initiator'],
             ['name' => 'Viper', 'role' => 'Controller'],
             ['name' => 'Vyse', 'role' => 'Duelist'],
-            ['name' => 'Waylay', 'role' => 'Duelist'],
             ['name' => 'Yoru', 'role' => 'Duelist'],
         ];
 
