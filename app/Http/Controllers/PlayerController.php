@@ -2,63 +2,50 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Player;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
+use Illuminate\Http\RedirectResponse;
 
 class PlayerController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
+    public function index(): View
     {
-        //
+        $players = Player::orderByDesc('elo')->get();
+        return view('players.index', compact('players'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    public function create(): View
     {
-        //
+        return view('players.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
+    public function store(Request $request): RedirectResponse
     {
-        //
+        return redirect()->route('players.index');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+    public function show(string $id): View
     {
-        //
+        $player = Player::with(['agentStats.agent', 'mapStats.map'])->findOrFail($id);
+        return view('players.show', compact('player'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
+    public function edit(string $id): View
     {
-        //
+        $player = Player::findOrFail($id);
+        return view('players.edit', compact('player'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
+    public function update(Request $request, string $id): RedirectResponse
     {
-        //
+        $player = Player::findOrFail($id);
+        return redirect()->route('players.show', $player->id);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
+    public function destroy(string $id): RedirectResponse
     {
-        //
+        $player = Player::findOrFail($id);
+        return redirect()->route('players.index');
     }
 }
