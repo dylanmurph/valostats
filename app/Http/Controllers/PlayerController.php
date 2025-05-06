@@ -25,15 +25,16 @@ class PlayerController extends Controller
         return redirect()->route('players.index');
     }
 
-    public function show(string $id): View
+    public function show(Player $player)
     {
-        $player = Player::with(['agentStats.agent', 'mapStats.map'])->findOrFail($id);
+        $player->load([
+            'agentStats.agent',
+            'mapStats.map',
+        ]);
 
-        $bestAgent = $player->agentStats->sortByDesc('win_rate')->first()?->agent;
-        $bestMap = $player->mapStats->sortByDesc('win_rate')->first()?->map;
-
-        return view('players.show', compact('player', 'bestAgent', 'bestMap'));
+        return view('players.show', compact('player'));
     }
+
 
     public function edit(string $id): View
     {
