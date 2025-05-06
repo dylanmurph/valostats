@@ -44,5 +44,18 @@ class Player extends Model
             'image' => 'images/ranks/unranked.png',
         ];
     }
+    public static function topThree()
+    {
+        return self::orderByDesc('elo')->take(3)->get();
+    }
 
+    public function bestAgent()
+    {
+        return $this->agentStats->sortByDesc('win_rate')->first()?->agent;
+    }
+
+    public function bestMap()
+    {
+        return $this->mapStats->sortByDesc('win_rate')->first()?->map;
+    }
 }
