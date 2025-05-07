@@ -5,7 +5,7 @@ This is my website for my Server Side Development CA3. It is a statistics websit
 ---
 
 <details>
-<summary>Click to expand: Clone and Run Locally</summary>
+<summary>🔻Click to expand: Clone and Run Locally🔻</summary>
 
 
 ## Cloning this website.
@@ -65,7 +65,7 @@ php artisan serve
 ---
 
 <details>
-<summary>Click to expand: Project Overview</summary>
+<summary>🔻Click to expand: Project Overview🔻</summary>
 
 ## Project Overview
 This is a Laravel-based web application to display player statistics and information for Valorant. You can view player statistics, leaderboards, maps and agents information.
@@ -121,7 +121,7 @@ The seeder FullStatSeeder generates realistic randomised mock data of players wi
 
 
 <details>
-<summary>Click to expand: MVC Architecture Breakdown</summary>
+<summary>🔻Click to expand: MVC Architecture Breakdown🔻</summary>
 
 ## MVC Architecture Breakdown
 
@@ -154,7 +154,7 @@ The seeder FullStatSeeder generates realistic randomised mock data of players wi
 ---
 
 <details>
-<summary>Click to expand: Incomplete/Planned features</summary>
+<summary>🔻Click to expand: Incomplete/Planned features🔻</summary>
 
 ### Incomplete/Planned Features
 - Complete match data for 5v5 matches
