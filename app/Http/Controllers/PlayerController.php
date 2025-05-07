@@ -9,11 +9,31 @@ use Illuminate\Http\RedirectResponse;
 
 class PlayerController extends Controller
 {
-    public function index(): View
+    public function index(Request $request): View
     {
-        $players = Player::orderByDesc('elo')->get();
-        return view('players.index', compact('players'));
+        $sort = $request->get('sort', 'elo');
+        $direction = $request->get('direction', 'desc');
+
+        $players = Player::all();
+
+        foreach ($players as $player) {
+            $player->win_rate_computed = $player->games_played > 0
+                ? ($player->wins / $player->games_played) * 100
+                : 0;
+        }
+
+        $players = match ($sort) {
+            'win_rate' => $players->sortBy(fn($p) => $p->win_rate_computed, SORT_REGULAR, $direction === 'desc'),
+            default => $players->sortBy($sort, SORT_REGULAR, $direction === 'desc')
+        };
+
+        $eloRanks = $players->sortByDesc('elo')->pluck('id')->flip();
+
+        return view('players.index', compact('players', 'eloRanks', 'sort', 'direction'));
     }
+
+
+
 
     public function create(): View
     {
