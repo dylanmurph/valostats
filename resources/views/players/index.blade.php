@@ -20,7 +20,7 @@
         $direction = $direction ?? 'desc';
     @endphp
 
-    <div class="min-h-screen bg-background py-16 px-8">
+    <div class="min-h-screen bg-background py-10 px-8">
         <div class="w-full max-w-7xl mx-auto">
             <h2 class="text-4xl font-bold text-aqua mb-10 text-center">Leaderboard</h2>
 
