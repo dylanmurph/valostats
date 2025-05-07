@@ -130,9 +130,6 @@
                     Maps
                 </div>
             </a>
-
         </div>
-
-
     </div>
 @endsection

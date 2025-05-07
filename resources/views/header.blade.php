@@ -3,7 +3,10 @@
 
         <!-- Left: Logo / Site Title -->
         <a href="{{ route('home') }}" class="text-aqua text-2xl font-bold tracking-wide">
-            Valorant Stats
+            <div class="w-10 h-10 gap-1 flex items-center justify-center">
+                <img src="{{ asset('images/logo.png') }}" alt="Logo" class="bg-aqua p-1 rounded-md object-contain" />
+                ValoStats
+            </div>
         </a>
 
         <!-- Right: Navigation Links -->
