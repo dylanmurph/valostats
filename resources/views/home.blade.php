@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="bg-background min-h-screen w-full px-6 pt-4 flex flex-col items-center text-white">
+    <div class="bg-background w-full px-6 pt-4 flex flex-col items-center text-white">
 
-        <div class="relative w-full max-w-[1800px] rounded-3xl overflow-hidden shadow-lg">
+        <div class="relative w-full max-w-[1800px] rounded-3xl overflow-hidden shadow-lg bg-surface">
 
             {{-- Background image and gradient overlay --}}
             <img src="{{ asset('images/banner.png') }}"
@@ -22,7 +22,7 @@
                             </div>
                             <div class="flex flex-col">
                                 <h1 class="text-3xl sm:text-4xl font-extrabold text-white tracking-wide">VALOSTATS</h1>
-                                <p class="text-foreground text-sm sm:text-base">Check Detailed Valorant Stats and Leaderboards</p>
+                                <p class="text-foreground text-sm sm:text-base">Detailed Valorant Stats and Leaderboards</p>
                             </div>
                         </div>
 
@@ -91,7 +91,7 @@
 
             {{-- Players Card --}}
             <a href="{{ route('players.index') }}"
-               class="aspect-square relative rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition group">
+               class="aspect-square relative rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition group bg-surface">
 
                 <img src="{{ asset('images/ranks/radiant.png') }}"
                      class="absolute inset-0 w-full h-full object-contain opacity-20 group-hover:opacity-60 transition" />
@@ -105,7 +105,7 @@
 
             {{-- Agents Card --}}
             <a href="{{ route('agents.index') }}"
-               class="aspect-square relative rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition group">
+               class="aspect-square relative rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition group bg-surface">
 
                 <img src="{{ asset('images/agents/jett.png') }}"
                      class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-60 transition" />
@@ -119,7 +119,7 @@
 
             {{-- Maps Card --}}
             <a href="{{ route('maps.index') }}"
-               class="aspect-square relative rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition group">
+               class="aspect-square relative rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition group bg-surface">
 
                 <img src="{{ asset('images/maps/haven.png') }}"
                      class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-60 transition" />

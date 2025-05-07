@@ -11,7 +11,12 @@ class AgentController extends Controller
 {
     public function index(): View
     {
-        $agents = Agent::all();
+        $agents = Agent::whereNotNull('role')
+            ->orderBy('role')
+            ->orderBy('name')
+            ->get()
+            ->groupBy('role');
+
         return view('agents.index', compact('agents'));
     }
 

@@ -8,7 +8,7 @@
             <div class="rounded-t-xl bg-surface w-full min-h-[220px] sm:min-h-[260px] relative shadow-lg">
                 <img src="{{ asset('images/maps/' . strtolower($player->bestMap()?->name ?? 'abyss') . '.png') }}"
                      alt="Banner"
-                     class="absolute inset-0 w-full h-full object-cover opacity-30" />
+                     class="rounded-t-xl absolute inset-0 w-full h-full object-cover opacity-30" />
 
                 <div class="absolute w-36 sm:w-44 aspect-square bg-surface rounded-full bottom-[-87px] left-4 sm:left-6 border-4 border-aqua shadow-lg z-10 overflow-hidden">
                     <img src="{{ asset('images/agents/' . strtolower($player->bestAgent()?->name ?? 'default') . '.png') }}"
