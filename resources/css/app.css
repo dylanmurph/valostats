@@ -7,3 +7,7 @@
     mask-size: 100% 100%;
     mask-repeat: no-repeat;
 }
+
+body {
+    @apply font-sans;
+}

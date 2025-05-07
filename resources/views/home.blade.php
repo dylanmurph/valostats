@@ -22,15 +22,15 @@
                             </div>
                             <div class="flex flex-col">
                                 <h1 class="text-3xl sm:text-4xl font-extrabold text-white tracking-wide">VALOSTATS</h1>
-                                <p class="text-foreground text-sm sm:text-base">Detailed Valorant Stats and Leaderboards</p>
+                                <p class="text-foreground text-sm sm:text-base">Valorant Player Stats, Leaderboards & Competitive Insights</p>
                             </div>
                         </div>
 
-                        <div class="w-full max-w-xl">
-                            <input type="text"
-                                   placeholder="Search agents, players, or maps..."
-                                   class="w-full bg-mid text-foreground placeholder:text-gray-400 px-4 py-3 rounded-xl shadow-inner focus:outline-none focus:ring-2 focus:ring-aqua-light" />
-                        </div>
+{{--                        <div class="w-full max-w-xl">--}}
+{{--                            <input type="text"--}}
+{{--                                   placeholder="Search agents, players, or maps..."--}}
+{{--                                   class="w-full bg-mid text-foreground placeholder:text-gray-400 px-4 py-3 rounded-xl shadow-inner focus:outline-none focus:ring-2 focus:ring-aqua-light" />--}}
+{{--                        </div>--}}
                     </div>
 
                     {{-- Right side: Top 3 Players --}}
@@ -93,8 +93,8 @@
             <a href="{{ route('players.index') }}"
                class="aspect-square relative rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition group bg-surface">
 
-                <img src="{{ asset('images/ranks/radiant.png') }}"
-                     class="absolute inset-0 w-full h-full object-contain opacity-20 group-hover:opacity-60 transition" />
+                <img src="{{ asset('images/leaderboard.jpg') }}"
+                     class="absolute inset-0 w-full h-full object-contain opacity-70 group-hover:opacity-90 transition" />
 
                 <div class="absolute inset-0 bg-gradient-to-b from-background/40 to-mid/80 z-0"></div>
 
@@ -107,8 +107,8 @@
             <a href="{{ route('agents.index') }}"
                class="aspect-square relative rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition group bg-surface">
 
-                <img src="{{ asset('images/agents/jett.png') }}"
-                     class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-60 transition" />
+                <img src="{{ asset('images/agents.jpg') }}"
+                     class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition" />
 
                 <div class="absolute inset-0 bg-gradient-to-b from-background/40 to-mid/80 z-0"></div>
 
@@ -121,8 +121,8 @@
             <a href="{{ route('maps.index') }}"
                class="aspect-square relative rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition group bg-surface">
 
-                <img src="{{ asset('images/maps/haven.png') }}"
-                     class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-60 transition" />
+                <img src="{{ asset('images/maps.jpg') }}"
+                     class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition" />
 
                 <div class="absolute inset-0 bg-gradient-to-b from-background/40 to-mid/80 z-0"></div>
 

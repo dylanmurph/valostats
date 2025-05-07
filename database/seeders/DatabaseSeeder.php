@@ -9,11 +9,9 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call([
-            PlayerSeeder::class,
             AgentSeeder::class,
             ValorantMapSeeder::class,
-            PlayerAgentStatSeeder::class,
-            PlayerMapStatSeeder::class,
+            FullStatSeeder::class,
         ]);
     }
 }
