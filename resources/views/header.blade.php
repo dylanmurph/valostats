@@ -13,6 +13,7 @@
         <nav class="space-x-6 text-sm">
             <a href="{{ route('players.index') }}" class="text-slate-300 hover:text-aqua transition">Players</a>
             <a href="{{ route('agents.index') }}" class="text-slate-300 hover:text-aqua transition">Agents</a>
+            <a href="{{ route('maps.index') }}" class="text-slate-300 hover:text-aqua transition">Maps</a>
         </nav>
 
     </header>

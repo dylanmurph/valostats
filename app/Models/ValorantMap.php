@@ -13,6 +13,9 @@ class ValorantMap extends Model
     protected $fillable = [
         'name',
         'image_url',
+        'location',
+        'minimap_url',
+        'description',
     ];
 
     public function playerStats(): HasMany
