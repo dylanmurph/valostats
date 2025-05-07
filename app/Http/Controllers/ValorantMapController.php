@@ -27,7 +27,8 @@ class ValorantMapController extends Controller
 
     public function show(string $id): View
     {
-        return view('maps.show', compact('id'));
+        $map = ValorantMap::findOrFail($id);
+        return view('maps.show', compact('map'));
     }
 
     public function edit(string $id): View
