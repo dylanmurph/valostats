@@ -113,7 +113,7 @@ The database is seeded with true map/agent data from Valorant.
 The seeder FullStatSeeder generates realistic randomised mock data of players with their map/agent statistics 
 
 ### ERD
-![ERD Diagram](public\images\erd.png)
+![ERD Diagram](https://raw.githubusercontent.com/dylanmurph/valostats/main/public/images/erd.png)
 
 </details>
 
