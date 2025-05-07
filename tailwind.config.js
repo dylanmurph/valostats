@@ -1,3 +1,4 @@
+// tailwind.config.js
 module.exports = {
     content: [
         './resources/**/*.blade.php',
@@ -22,8 +23,10 @@ module.exports = {
                     hover: '#0d9488',
                 },
             },
+            fontFamily: {
+                sans: ['Montserrat', 'ui-sans-serif', 'system-ui'],
+            },
         },
-
     },
     plugins: [],
 }
