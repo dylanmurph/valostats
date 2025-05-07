@@ -1,5 +1,5 @@
-<div class="w-full bg-mid shadow-sm">
-    <header class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+<div class="sticky top-0 z-10 w-full bg-mid">
+    <header class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between shadow-xl">
 
         <!-- Left: Logo / Site Title -->
         <a href="{{ route('home') }}" class="text-aqua text-2xl font-bold tracking-wide">

@@ -14,6 +14,20 @@ class Agent extends Model
         'name',
         'role',
         'image_url',
+        'bg_url',
+        'biography',
+        'ability1',
+        'ability2',
+        'ability3',
+        'ultimate',
+        'ability1_desc',
+        'ability2_desc',
+        'ability3_desc',
+        'ultimate_desc',
+        'ability1_url',
+        'ability2_url',
+        'ability3_url',
+        'ultimate_url',
     ];
 
     public function stats(): HasMany
