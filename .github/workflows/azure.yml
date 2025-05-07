@@ -1,0 +1,30 @@
+name: Laravel Deploy to Azure
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+          extensions: mbstring, pdo, pdo_mysql, curl, tokenizer, xml, bcmath, fileinfo
+
+      - name: Install Composer dependencies
+        run: composer install --no-dev --prefer-dist --optimize-autoloader
+
+      - name: Copy files to Azure
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'valostats-d00223094'
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          package: .
