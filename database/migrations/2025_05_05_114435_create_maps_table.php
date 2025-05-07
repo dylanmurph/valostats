@@ -10,6 +10,9 @@ return new class extends Migration {
             $table->id();
             $table->string('name')->unique();
             $table->string('image_url')->nullable();
+            $table->string('location')->nullable();
+            $table->string('minimap_url')->nullable();
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }
