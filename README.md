@@ -2,6 +2,8 @@
 # Valorant Stats Tracker
 This is my website for my Server Side Development CA3. It is a statistics website for a tactical first person shooter game called Valorant
 
+[Youtube video](https://www.youtube.com/watch?v=bBn7M23f1Ok)
+
 ---
 
 <details>
